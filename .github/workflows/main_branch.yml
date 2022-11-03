@@ -48,7 +48,8 @@ jobs:
           scantimeout: 15
         continue-on-error: true
 
-   veracode-sca-task:
+
+  veracode-sca-task:
     runs-on: ubuntu-latest
     name: Scan repository for Issues
 
