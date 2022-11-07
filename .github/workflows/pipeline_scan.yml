@@ -52,12 +52,12 @@ jobs:
           #store_baseline_file_branch: "feature-A"
           #create_baseline_from: "standard"
           #debug: 1
-          fail_build: true
+          fail_build: false
 
   veracode-sca-task:
     runs-on: ubuntu-latest
-    name: Scan repository for Issues
-
+    name: SCA scan
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -68,3 +68,19 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           create-issues: true
+
+  import-policy-flaws:
+    needs: pipeline_scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: get flaw file
+        uses: actions/download-artifact@v2
+        with:
+          name: policy-flaws
+          path: /tmp
+
+      - name: import flaws as issues
+        uses: veracode/veracode-flaws-to-issues@v2.0
+        with:
+          scan-results-json: '/tmp/policy_flaws.json'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
