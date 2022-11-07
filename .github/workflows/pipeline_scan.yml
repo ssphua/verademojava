@@ -45,8 +45,9 @@ jobs:
         with:
           vid: '${{ secrets.VERACODE_API_ID }}'
           vkey: '${{ secrets.VERACODE_API_KEY }}'
-          file: "verademo.war" 
-          request_policy: "VeraDemo Policy"
+          file: "verademo.war"
+          request_policy: "Verademo Policy"
+          #request_policy: "VeraDemo Policy"
           #store_baseline_file: true
           #store_baseline_file_branch: "feature-A"
           #create_baseline_from: "standard"
