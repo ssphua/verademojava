@@ -1,8 +1,8 @@
 name: Feature-A Branch Workflow
 
 on:
-  push:
-    branches: [Feature-A]
+  schedule:
+    - cron:  '0 0 * * *'
 
 jobs:
   build:
