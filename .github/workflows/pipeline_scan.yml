@@ -76,11 +76,11 @@ jobs:
       - name: get flaw file
         uses: actions/download-artifact@v2
         with:
-          name: policy-flaws
+          name: Veracode Pipeline-Scan Results
           path: /tmp
 
       - name: import flaws as issues
-        uses: veracode/veracode-flaws-to-issues@v1
+        uses: veracode/veracode-flaws-to-issues@v2.0.0
         with:
-          scan-results-json: '/tmp/policy_flaws.json'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          scan-results-json: '/tmp/filtered_results.json'
+          #github-token: ${{ secrets.GITHUB_TOKEN }}
