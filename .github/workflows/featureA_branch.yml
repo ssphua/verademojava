@@ -2,7 +2,7 @@ name: Feature-A Branch Workflow
 
 on:
   schedule:
-    - cron:  '07 54 * * *'
+    - cron:  '7 59 * * *'
 
 jobs:
   build:
@@ -65,6 +65,7 @@ jobs:
           create-issues: true
   
   get-policy-flaws:
+    needs: build
     runs-on: ubuntu-latest
     container: 
       image: veracode/api-signing:latest
