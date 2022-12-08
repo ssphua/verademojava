@@ -2,7 +2,7 @@ name: Feature-A Branch Workflow
 
 on:
   schedule:
-    - cron:  '17 8 * * *'
+    - cron:  '16 8 * * *'
 
 jobs:
   build:
