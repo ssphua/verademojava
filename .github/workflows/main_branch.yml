@@ -1,4 +1,4 @@
-name: Main Branch Workflow
+name: Main Branch Workflow - On Push
 
 on:
   push:
