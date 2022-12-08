@@ -1,4 +1,4 @@
-name: Feature A Branch Commit Workflow
+name: Feature A onPush - Pipeline Scan
 
 on:
   push:
