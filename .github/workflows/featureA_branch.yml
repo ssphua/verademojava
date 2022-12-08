@@ -1,4 +1,4 @@
-name: Feature-A Branch Workflow
+name: Feature A onSchedule - Sandbox Scan
 
 on:
   schedule:
