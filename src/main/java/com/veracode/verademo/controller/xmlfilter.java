@@ -5,7 +5,7 @@ import org.apache.xml.security.signature.XMLSignatureInput;
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.ByteArrayInputStream;
-//import java.io.IOException;
+import java.io.IOException;
 
 public class xmlfilter {
 
