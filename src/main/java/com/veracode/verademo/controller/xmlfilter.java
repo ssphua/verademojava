@@ -1,10 +1,10 @@
 package com.veracode.verademo.controller;
 
-import org.apache.commons.fileupload.MultipartStream;
+//import org.apache.commons.fileupload.MultipartStream;
 import org.apache.xml.security.signature.XMLSignatureInput;
 import org.mindrot.jbcrypt.BCrypt;
 
-import java.io.ByteArrayInputStream;
+//import java.io.ByteArrayInputStream;
 
 public class xmlfilter {
 
@@ -20,7 +20,7 @@ public class xmlfilter {
   private static void filterXMLSignature() {
     byte[] bytes = new byte[256];
 
-    new MultipartStream(new ByteArrayInputStream(bytes), bytes);
+    //new MultipartStream(new ByteArrayInputStream(bytes), bytes);
 
     new XMLSignatureInput(bytes).addNodeFilter(null);
   }
